@@ -1,4 +1,13 @@
-<script></script>
+<script>
+export default{
+    data(){
+        return{}
+    },
+    methods: {
+        
+    },
+}
+</script>
 
 <template>
     <div class="container">
@@ -15,6 +24,7 @@
     </label>
 
     <button id="my_btn" class="my_btn" type="button">開始計算</button>
+    <button id="my_btn" class="my_btn" type="button">清除計算</button>
 
     <div class="my-span">
         <span>您的BMI值:</span><span class="show_01"></span>
