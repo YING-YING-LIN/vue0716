@@ -1,6 +1,9 @@
 <script></script>
 
-<template><form class="form-style">
+<template>
+    <div class="container">
+
+<form class="form-style">
     <h2>BMI測驗</h2>
     <label for="my_height">
         <span>身高:</span>
@@ -56,6 +59,8 @@
 
 
 </table>
+
+</div>
 </template>
 
 <style>
