@@ -3,10 +3,22 @@ export default{
     data(){
         return{
         peopleheight:0,
+        peopleweight:0,
+        result:-1,
         
         }
     },
     methods: {
+        bmical(){
+            this.result = (this.peopleweight/((this.peopleheight/100)*(this.peopleheight/100).toFixed(2)));
+        },
+        clearbmi(){
+            this.peopleheight=0;
+            this.peopleweight=0;
+            this.result=-1;
+
+        },
+
         
     },
 }
@@ -26,11 +38,11 @@ export default{
         <input type="number" class="my_weight" id="my_weight"><span>kg</span>
     </label>
 
-    <button id="my_btn" class="my_btn" type="button">開始計算</button>
-    <button id="my_btn" class="my_btn" type="button">清除計算</button>
+    <button @click="bmical" id="my_btn" class="my_btn" type="button">開始計算</button>
+    <button @click="clearbmi" id="my_btn" class="my_btn" type="button">清除計算</button>
 
     <div class="my-span">
-        <span>您的BMI值:</span><span class="show_01"></span>
+        <span>您的BMI值:</span><span class="show_01">{{ result.toFixed(2) }}</span>
     </div>
 
 </form>
@@ -104,4 +116,9 @@ export default{
 
 
         }
+
+        .yellow{background-color: yellow;}
+        .yellowgreen{background-color: yellowgreen;}
+        .orange{background-color: orange;}
+        .red{background-color: red;}
 </style>
