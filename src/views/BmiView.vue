@@ -39,8 +39,8 @@ export default {
                 <input v-model="peopleweight" type="number" class="my_weight" id="my_weight"><span>kg</span>
             </label>
 
-            <button @click="bmical" id="my_btn" class="my_btn mt-[10px]" type="button">開始計算</button>
-            <button @click="clearbmi" id="my_btn" class="my_btn mt-[10px]" type="button">清除計算</button>
+            <button @click="bmical" id="my_btn" class="my_btn mt-[10px] border" type="button">開始計算</button>
+            <button @click="clearbmi" id="my_btn" class="my_btn mt-[10px] border" type="button">清除計算</button>
 
             <div class="my-span mt-[10px]" v-if="result !== null">
                 <span>您的BMI值:</span><span class="show_01">{{ result }}</span>
