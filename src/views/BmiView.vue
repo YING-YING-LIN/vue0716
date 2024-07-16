@@ -10,8 +10,10 @@ export default{
     },
     methods: {
         bmical() {
-            if (this.peopleheight > 0 && this.peopleweight > 0) {
-                this.result = (this.peopleweight / ((this.peopleheight / 100) * (this.peopleheight / 100))).toFixed(2);
+            const height = parseFloat(this.peopleheight);
+            const weight = parseFloat(this.peopleweight);
+            if (height > 0 && weight > 0) {
+                this.result = (weight / ((height / 100) * (height / 100))).toFixed(2);
             } else {
                 this.result = null;
             }
@@ -35,11 +37,11 @@ export default{
     <h2>BMI測驗</h2>
     <label for="my_height">
         <span>身高:</span>
-        <input v-model="peopleheight" type="number" class="my_height" id="my_height"><span>cm</span>
+        <input v-model.number="peopleheight" type="number" class="my_height" id="my_height"><span>cm</span>
     </label>
     <label for="my_weight">
         <span>體重:</span>
-        <input v-model="peopleweight" type="number" class="my_weight" id="my_weight"><span>kg</span>
+        <input v-model.number="peopleweight" type="number" class="my_weight" id="my_weight"><span>kg</span>
     </label>
 
     <button @click="bmical" id="my_btn" class="my_btn" type="button">開始計算</button>
