@@ -28,7 +28,7 @@ export default {
 
 <template>
     <div class="container">
-        <form class="form-style">
+        <form class="form-style w-[200px] mt-[50px]">
             <h2>BMI測驗</h2>
             <label for="my_height">
                 <span>身高:</span>
@@ -39,15 +39,15 @@ export default {
                 <input v-model="peopleweight" type="number" class="my_weight" id="my_weight"><span>kg</span>
             </label>
 
-            <button @click="bmical" id="my_btn" class="my_btn" type="button">開始計算</button>
-            <button @click="clearbmi" id="my_btn" class="my_btn" type="button">清除計算</button>
+            <button @click="bmical" id="my_btn" class="my_btn mt-[10px]" type="button">開始計算</button>
+            <button @click="clearbmi" id="my_btn" class="my_btn mt-[10px]" type="button">清除計算</button>
 
-            <div class="my-span" v-if="result !== null">
+            <div class="my-span mt-[10px]" v-if="result !== null">
                 <span>您的BMI值:</span><span class="show_01">{{ result }}</span>
             </div>
         </form>
 
-        <table class="my-table">
+        <table class="my-table mt-[10px]">
             <tr>
                 <th>顯示範圍</th>
                 <th>身體質量指數(BMI) (kg/m2)</th>
@@ -90,22 +90,11 @@ export default {
 
 <style>
 .form-style {
-    width: 200px;
     margin: auto;
-    margin-top: 50px;
-}
-
-.my_btn {
-    margin-top: 10px;
-}
-
-.my-span {
-    margin-top: 10px;
 }
 
 .my-table {
     margin: auto;
-    margin-top: 10px;
 }
 
 table,
