@@ -31,11 +31,11 @@ export default{
     <h2>BMI測驗</h2>
     <label for="my_height">
         <span>身高:</span>
-        <input type="number" class="my_height" id="my_height"><span>cm</span>
+        <input v-model="peopleheight" type="number" class="my_height" id="my_height"><span>cm</span>
     </label>
     <label for="my_weight">
         <span>體重:</span>
-        <input type="number" class="my_weight" id="my_weight"><span>kg</span>
+        <input v-model="peopleweight" type="number" class="my_weight" id="my_weight"><span>kg</span>
     </label>
 
     <button @click="bmical" id="my_btn" class="my_btn" type="button">開始計算</button>
