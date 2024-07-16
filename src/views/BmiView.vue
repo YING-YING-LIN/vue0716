@@ -10,7 +10,7 @@ export default{
     },
     methods: {
         bmical(){
-            this.result = (this.peopleweight/((this.peopleheight/100)*(this.peopleheight/100))).toFixed(2);
+            this.result = (parseInt(this.peopleweight)/(parseInt((this.peopleheight/100))*parseInt((this.peopleheight/100)))).toFixed(2);
         },
         clearbmi(){
             this.peopleheight=0;
