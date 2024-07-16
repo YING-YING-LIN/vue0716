@@ -1,7 +1,10 @@
 <script>
 export default{
     data(){
-        return{}
+        return{
+        peopleheight:0,
+        
+        }
     },
     methods: {
         
