@@ -4,18 +4,22 @@ export default{
         return{
         peopleheight:0,
         peopleweight:0,
-        result:-1,
+        result:null,
         
         }
     },
     methods: {
-        bmical(){
-            this.result = (parseInt(this.peopleweight)/(parseInt((this.peopleheight/100))*parseInt((this.peopleheight/100)))).toFixed(2);
+        bmical() {
+            if (this.peopleheight > 0 && this.peopleweight > 0) {
+                this.result = (this.peopleweight / ((this.peopleheight / 100) * (this.peopleheight / 100))).toFixed(2);
+            } else {
+                this.result = null;
+            }
         },
         clearbmi(){
             this.peopleheight=0;
             this.peopleweight=0;
-            this.result=-1;
+            this.result=null;
 
         },
 
