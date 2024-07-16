@@ -55,30 +55,57 @@ export default{
             (kg/m2)</th>
 
     </tr>
-    <tr id="thin">
+    <tr id="thin" v-if="result<18.5">
 
-        <td>BMI ＜ 18.5 </td>
-        <td>「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！</td>
-
-    </tr>
-    <tr id="normal">
-
-        <td>18.5≦BMI＜24</td>
-        <td>恭喜！「健康體重」，要繼續保持！</td>
+        <td class="yellow">BMI ＜ 18.5 </td>
+        <td class="yellow">「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！</td>
 
     </tr>
+    <tr id="thin" v-else>
 
-    <tr id="heavy">
+    <td>BMI ＜ 18.5 </td>
+    <td>「體重過輕」，需要多運動，均衡飲食，以增加體能，維持健康！</td>
 
-        <td>24≦BMI＜27</td>
-        <td>「體重過重」了，要小心囉，趕快力行「健康體重管理」！</td>
+    </tr>
+    <tr id="normal" v-if="18.5<=result && result<24">
+
+        <td class="yellowgreen">18.5≦BMI＜24</td>
+        <td class="yellowgreen">恭喜！「健康體重」，要繼續保持！</td>
 
     </tr>
 
-    <tr id="fat">
+    <tr id="normal" v-else>
 
-        <td>27≦BMI</td>
-        <td>啊～「肥胖」，需要立刻力行「健康體重管理」囉！</td>
+    <td >18.5≦BMI＜24</td>
+    <td >恭喜！「健康體重」，要繼續保持！</td>
+
+    </tr>
+
+    <tr id="heavy" v-if="24<=result && result<27">
+
+        <td class="orange">24≦BMI＜27</td>
+        <td class="orange">「體重過重」了，要小心囉，趕快力行「健康體重管理」！</td>
+
+    </tr>
+
+    <tr id="heavy" v-else>
+
+    <td >24≦BMI＜27</td>
+    <td >「體重過重」了，要小心囉，趕快力行「健康體重管理」！</td>
+
+    </tr>
+
+    <tr id="fat" v-if="27<=result">
+
+        <td class="red">27≦BMI</td>
+        <td class="red">啊～「肥胖」，需要立刻力行「健康體重管理」囉！</td>
+
+    </tr>
+
+    <tr id="fat" v-else>
+
+    <td >27≦BMI</td>
+    <td >啊～「肥胖」，需要立刻力行「健康體重管理」囉！</td>
 
     </tr>
 
