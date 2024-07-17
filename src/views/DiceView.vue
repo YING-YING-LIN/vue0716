@@ -2,11 +2,11 @@
 
 <template>
     <div class="container">
-    <div><img src="./img/004.jpg" alt=""></div>
+    <div><img src="/@assets" alt=""></div>
     <button id="my_btn" type="button">開始擲骰子</button>
     <div id="show_box"></div>
     </div>
-    </template>
+</template>
 
 <style>
 .container{
